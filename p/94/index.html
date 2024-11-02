@@ -45,7 +45,15 @@
 <li>解压 base-generic.zip ，进入 base 目录，执行 flash.bat 脚本，每次按 Enter 前可以用 <code class="notranslate">fastboot devices</code> 确认设备有正常连接。</li>
 <li>解压 debian.zip ，进入目录里，把 boot-uz801.img 重命名为 boot.img 并覆盖 debian 目录下的 boot.img 文件。最后执行 flash.bat 脚本，每次按 Enter 前可以用 <code class="notranslate">fastboot devices</code> 确认设备有正常连接。</li>
 <li>最后重新插入随时 WiFi ,再参考 <a href="https://blog.iamsjy.com/2023/12/11/snapdragon-410-portable-wifi-hotspot-flash-debian-and-optimize/" rel="nofollow">https://blog.iamsjy.com/2023/12/11/snapdragon-410-portable-wifi-hotspot-flash-debian-and-optimize/</a>  安装 RNDIS 网络驱动 。</li>
+<li>使用 adb shell 进入 debian ，或者 ssh 进入，然后使用 nmtui 连上家里的 WiFi 。</li>
+<li>安装 Docker</li>
 </ol>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">true</span> <span class="pl-k">&gt;</span> /etc/apt/sources.list.d/mobian.list
+sudo apt-get update
+apt-get install curl wget
+curl -fsSL https://get.docker.com <span class="pl-k">|</span> bash -s docker --mirror Aliyun
+systemctl <span class="pl-c1">enable</span> docker
+systemctl start docker</pre></div>
 <h2>参考</h2>
 <ul>
 <li><a href="https://cway.top/post/1060.html" rel="nofollow">https://cway.top/post/1060.html</a></li>
