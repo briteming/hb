@@ -30,7 +30,7 @@
         <div id="container">
             <div id="title">随身 wifi 骁龙 410 的 uz801 刷入 debian 笔记</div>
             <div id="content" class="markdown-body">
-                <p>参考 <a href="https://cway.top/post/1060.html" rel="nofollow">https://cway.top/post/1060.html</a></p>
+                <h2>步骤</h2>
 <ol>
 <li>进入 adb 模式，连上 WIFI ，访问 &lt;192.168.100.1/usbdebug.html&gt; 即可打开 adb 。</li>
 <li>执行 <code class="notranslate">adb devices</code> ，确认 adb 连接成功。</li>
@@ -46,6 +46,12 @@
 <li>解压 debian.zip ，进入目录里，把 boot-uz801.img 重命名为 boot.img 并覆盖 debian 目录下的 boot.img 文件。最后执行 flash.bat 脚本，每次按 Enter 前可以用 <code class="notranslate">fastboot devices</code> 确认设备有正常连接。</li>
 <li>最后重新插入随时 WiFi ,再参考 <a href="https://blog.iamsjy.com/2023/12/11/snapdragon-410-portable-wifi-hotspot-flash-debian-and-optimize/" rel="nofollow">https://blog.iamsjy.com/2023/12/11/snapdragon-410-portable-wifi-hotspot-flash-debian-and-optimize/</a>  安装 RNDIS 网络驱动 。</li>
 </ol>
+<h2>参考</h2>
+<ul>
+<li><a href="https://cway.top/post/1060.html" rel="nofollow">https://cway.top/post/1060.html</a></li>
+<li><a href="https://blog.iamsjy.com/2023/12/11/snapdragon-410-portable-wifi-hotspot-flash-debian-and-optimize/" rel="nofollow">https://blog.iamsjy.com/2023/12/11/snapdragon-410-portable-wifi-hotspot-flash-debian-and-optimize/</a></li>
+<li><a href="https://xn--6mq508o.eu.org/2022/10/12/wifi/" rel="nofollow">https://xn--6mq508o.eu.org/2022/10/12/wifi/</a></li>
+</ul>
             </div>
             <div id="comment">
                 <a href="https://github.com/hanxi/blog/issues/94#new_comment_field"> 点击进入评论 ... </a>
