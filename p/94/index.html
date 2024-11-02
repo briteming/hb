@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="Stylesheet" type="text/css" href="/css/style.css">
+        <link rel="Stylesheet" type="text/css" href="/css/tango.css">
+        <link rel="Stylesheet" type="text/css" href="/css/github-markdown.css">
+        <title>涵曦 ~ 博客</title>
+        <script src="/config.js"></script>
+        <script src="/util.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139883805-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-139883805-2');
+        </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="post-nav">
+                <a href="/">首页</a>
+                <a href="/about.html">关于</a>
+                <a href="/sitemap.html">所有文章</a>
+            </div>
+        </div>
+        <div id="container">
+            <div id="title">随身 wifi 骁龙 410 的 uz801 刷入 debian 笔记</div>
+            <div id="content" class="markdown-body">
+                <p>参考 <a href="https://cway.top/post/1060.html" rel="nofollow">https://cway.top/post/1060.html</a></p>
+<ol>
+<li>进入 adb 模式，连上 WIFI ，访问 &lt;192.168.100.1/usbdebug.html&gt; 即可打开 adb 。</li>
+<li>执行 <code class="notranslate">adb devices</code> ，确认 adb 连接成功。</li>
+<li>执行 <code class="notranslate">adb reboot bootloader</code> 进入 fastboot 模式。</li>
+<li>下载固件 <a href="https://github.com/OpenStick/OpenStick/releases/tag/v1">https://github.com/OpenStick/OpenStick/releases/tag/v1</a> ，只要下载下面三个即可。
+<ul>
+<li><a href="https://github.com/OpenStick/OpenStick/releases/download/v1/base-generic.zip">base-generic.zip</a></li>
+<li><a href="https://github.com/OpenStick/OpenStick/releases/download/v1/boot-uz801.img">boot-uz801.img</a></li>
+<li><a href="https://github.com/OpenStick/OpenStick/releases/download/v1/debian.zip">debian.zip</a></li>
+</ul>
+</li>
+<li>解压 base-generic.zip ，进入 base 目录，执行 flash.bat 脚本，每次按 Enter 前可以用 <code class="notranslate">fastboot devices</code> 确认设备有正常连接。</li>
+<li>解压 debian.zip ，进入目录里，把 boot-uz801.img 重命名为 boot.img 并覆盖 debian 目录下的 boot.img 文件。最后执行 flash.bat 脚本，每次按 Enter 前可以用 <code class="notranslate">fastboot devices</code> 确认设备有正常连接。</li>
+</ol>
+            </div>
+            <div id="comment">
+                <a href="https://github.com/hanxi/blog/issues/94#new_comment_field"> 点击进入评论 ... </a>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </body>
+    <script type="text/javascript">
+        setFooter();
+    </script>
+ 
+</html>

@@ -38,7 +38,7 @@
 <p>如果不做预生成处理，同样也会出现 Leaf-segment 里说的 TP999 指标问题（TP999 就是满足千分之九百九十九的网络请求所需要的最低耗时），所以也做了快要消耗完 ID 段时就去申请一个新的 ID 出来。</p>
 <h3>数据库结构</h3>
 <p>数据库的表结构是这样的，给 idtype 设置唯一索引：</p>
-<table role="table">
+<markdown-accessiblity-table><table role="table">
 <thead>
 <tr>
 <th align="center">idtype</th>
@@ -55,7 +55,7 @@
 <td align="center">2000</td>
 </tr>
 </tbody>
-</table>
+</table></markdown-accessiblity-table>
 <ul>
 <li>idtype 用来区分业务的，比如我这里的 uid 用来表示角色 ID 申请的号段，teamid 用来表示队伍 ID 申请的号段。</li>
 <li>nextid 用来表示下一次申请的 ID 的最小值。</li>
