@@ -49,8 +49,8 @@
 <li>安装 Docker</li>
 </ol>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">true</span> <span class="pl-k">&gt;</span> /etc/apt/sources.list.d/mobian.list
-sudo apt-get update
-apt-get install curl wget
+apt-get update
+apt-get install -y curl wget
 curl -fsSL https://get.docker.com <span class="pl-k">|</span> bash -s docker --mirror Aliyun
 systemctl <span class="pl-c1">enable</span> docker
 systemctl start docker</pre></div>
